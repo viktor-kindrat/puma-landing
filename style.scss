@@ -113,7 +113,7 @@ $Source: 'Source Serif Pro', serif;
         background: #EE5514;
         border-radius: 5px;
         border: none;
-        outline:none;
+        outline: none;
         font-family: $Poppis;
         font-style: normal;
         font-weight: 500;
@@ -125,16 +125,92 @@ $Source: 'Source Serif Pro', serif;
       }
     }
   }
+
   .menu {
     width: 100%;
     min-height: 100vh;
+    padding: 0 100px;
 
     .menu__background {
       height: 80vh;
       opacity: 0.1;
       z-index: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .menu__row {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      margin-top: 100px;
+      padding: 30px;
+      gap: 50px;
+
+      .menu__text-group {
+        height: calc(80vh - 130px);
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .menu__headline {
+          font-family: $Source;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 61px;
+          line-height: 120%;
+          color: #1A0A03;
+
+          &_orange {
+            color: #EE5514;
+          }
+        }
+
+        .menu__text {
+          font-family: $Poppis;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 160%;
+          color: #1A0A03;
+          opacity: 0.7;
+        }
+      }
+      .menu__image-group {
+        height: calc(80vh - 50px);
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-shrink: 0;
+
+        .menu__image-border {
+          width: 400px;
+          height: 400px;
+          min-width: 400px;
+          min-height: 400px;
+          max-width: 400px;
+          max-height: 400px;
+          flex-grow: 1;
+        }
+        .menu__next-btn {
+          width: 70px;
+          height: 70px;
+          background: rgba(238, 85, 20, 0.1) url("./images/arrow-right.svg") no-repeat 53% center;
+          background-size: 40% 40%;
+          border-radius: 50%;
+          border: none;
+          outline: none;
+          cursor: pointer;
+        }
+      }
     }
   }
+
   .menu * {
     z-index: 1;
   }

@@ -9,33 +9,51 @@
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="wrap">
-        <header class="header">
-            <div class="header__group">
-                <div class="logo">
-                    <div class="logo__text">Puma</div>
+<div class="wrap">
+    <header class="header">
+        <div class="header__group">
+            <div class="logo">
+                <div class="logo__text">Puma</div>
+            </div>
+            <nav class="header__navigation">
+                <ul class="header__list">
+                    <li class="header__list-item header__list-item_active"><a href="" class="header__url">Menu</a></li>
+                    <li class="header__list-item"><a href="" class="header__url">About</a></li>
+                    <li class="header__list-item"><a href="" class="header__url">Feature</a></li>
+                    <li class="header__list-item"><a href="" class="header__url">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__btn-wrapper">
+            <button class="header__btn">Buy now</button>
+        </div>
+    </header>
+    <section class="menu">
+        <div class="menu__row">
+            <div class="menu__text-group">
+                <h1 class="menu__headline">
+                    Life is better in running <span class="menu__headline_orange">shoes</span>.
+                </h1>
+                <p class="menu__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas leo ultrices
+                </p>
+            </div>
+            <div class="menu__image-group">
+                <div class="menu__image"></div>
+                <div class="menu__canvas-wrap">
+                    <canvas width="400px" height="400px" class="menu__image-border" id="menu__image-border">Unavialable in your browser</canvas>
                 </div>
-                <nav class="header__navigation">
-                    <ul class="header__list">
-                        <li class="header__list-item header__list-item_active"><a href="" class="header__url">Menu</a></li>
-                        <li class="header__list-item"><a href="" class="header__url">About</a></li>
-                        <li class="header__list-item"><a href="" class="header__url">Feature</a></li>
-                        <li class="header__list-item"><a href="" class="header__url">Gallery</a></li>
-                    </ul>
-                </nav>
+                <button class="menu__next-btn" id="menu__next-btn"></button>
             </div>
-            <div class="header__btn-wrapper">
-                <button class="header__btn">Buy now</button>
-            </div>
-        </header>
-        <section class="menu">
-            <canvas class="menu__background" id="menu__background"></canvas>
-        </section>
-    </div>
+        </div>
+        <canvas class="menu__background" id="menu__background"></canvas>
+    </section>
+</div>
 <script src="main.js"></script>
 </body>
 </html>
