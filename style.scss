@@ -9,6 +9,17 @@ $Source: 'Source Serif Pro', serif;
   box-sizing: border-box;
 }
 
+@keyframes slide {
+  0% {
+    position: relative;
+    right: 0;
+  }
+  100% {
+    position: relative;
+    right: -100vw;
+  }
+}
+
 %logo-styles {
   .logo__text {
     font-family: $Source;
@@ -37,6 +48,7 @@ $Source: 'Source Serif Pro', serif;
 .wrap {
   width: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
 
   .header {
     width: 100%;
@@ -188,6 +200,33 @@ $Source: 'Source Serif Pro', serif;
         justify-content: space-around;
         flex-shrink: 0;
 
+        .menu__image {
+          height: 400px;
+          width: 550px;
+          margin-right: -255px;
+          background: transparent url("./images/main-images/0.png") no-repeat center;
+          background-size: contain;
+          z-index: 5;
+          flex-grow: 0;
+          display: flex;
+        }
+
+        .menu__canvas-wrap {
+          &::after {
+            content: '';
+            display: flex;
+            width: 400px;
+            height: 100px;
+            margin-top: -100px;
+            margin-left: -280px;
+            z-index: 3;
+            background: rgba(0, 0, 0, 0.3);
+            filter: blur(74px);
+            align-self: flex-end;
+            border-radius: 50%;
+          }
+        }
+
         .menu__image-border {
           width: 400px;
           height: 400px;
@@ -196,6 +235,8 @@ $Source: 'Source Serif Pro', serif;
           max-width: 400px;
           max-height: 400px;
           flex-grow: 1;
+          margin-left: -275px;
+          z-index: 2;
         }
         .menu__next-btn {
           width: 70px;
@@ -206,6 +247,8 @@ $Source: 'Source Serif Pro', serif;
           border: none;
           outline: none;
           cursor: pointer;
+          margin-right: -60px;
+          z-index: 6;
         }
       }
     }

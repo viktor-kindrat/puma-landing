@@ -6,10 +6,35 @@ bgGradient = bgctx.createLinearGradient(0, 0, ctxWidth - ctxWidth * 0.1, 0)
 border = document.getElementById('menu__image-border')
 brdrctx = border.getContext('2d')
 borderHeight = border.height
-borderWidth = border.width;
+borderWidth = border.width
+menuNext = document.getElementById('menu__next-btn')
+menuImage = document.getElementById('menu__image')
+imagesCount = 1
+imageIndex = 0;
 
+menuNext.addEventListener('click', function () {
+    if (imageIndex < imagesCount) {
+        imageIndex++
+    } else {
+        imageIndex = 0;
+    }
+    menuImage.style.animation = ''
+    setTimeout(function () {
+        menuImage.style.animation = 'slide 0.5s 1 ease-in forwards'
+    }, 10)
+    setTimeout(function () {
+        menuImage.style.opacity = '0';
+        menuImage.style.background = 'transparent url("./images/main-images/' + imageIndex + '.png") no-repeat center';
+        menuImage.style.backgroundSize = 'contain';
+        menuImage.style.animation = '';
+        setTimeout(function () {
+            menuImage.style.opacity = '1';
+            menuImage.style.animation = 'slide 0.5s 1 reverse forwards'
+        }, 10)
+    }, 500)
+})
 
-brdrctx.fillStyle = 'rgba(238, 85, 20, 0.1)';
+brdrctx.fillStyle = 'rgba(238, 85, 20, 0.4)';
 brdrctx.fillRect(0, 0, borderWidth, borderHeight);
 brdrctx.clearRect(12, 12, borderWidth - 24, borderHeight - 24);
 
