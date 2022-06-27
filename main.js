@@ -20,7 +20,7 @@ function drawBackground() {
     ctx.beginPath();
     ctx.moveTo(0, 0);
     ctx.lineTo(0, menuBackground.height);
-    ctx.lineTo(ctxWidth - ctxWidth * 0.3, menuBackground.height);
+    ctx.lineTo(ctxWidth - ctxWidth * 0.4, menuBackground.height);
     ctx.lineTo(ctxWidth - ctxWidth * 0.2, 0);
     ctx.lineTo(0, 0);
     ctx.fill();
