@@ -16,7 +16,7 @@ function setupBg() {
 
 function drawBackground() {
     ctx.fillStyle = bgGradient;
-    ctx.clearRect(0, ctxWidth, ctxWidth, menuBackground.height)
+    ctx.clearRect(0, 0, ctxWidth, menuBackground.height)
     ctx.beginPath();
     ctx.moveTo(0, 0);
     ctx.lineTo(0, menuBackground.height);
