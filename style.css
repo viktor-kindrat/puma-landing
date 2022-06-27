@@ -96,9 +96,10 @@ table {
 }
 .wrap .header .header__group {
   height: 100%;
-  width: 60%;
+  width: 50%;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   gap: 50px;
 }
 .wrap .header .header__group .logo {
@@ -128,10 +129,11 @@ table {
   color: #EE5514;
 }
 .wrap .header .header__btn-wrapper {
+  width: 40%;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .wrap .header .header__btn-wrapper .header__btn {
   cursor: pointer;
@@ -157,7 +159,7 @@ table {
   min-height: 100vh;
 }
 .wrap .menu .menu__background {
-  height: 100vh;
+  height: 80vh;
   opacity: 0.1;
   z-index: 0;
 }

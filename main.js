@@ -2,14 +2,14 @@ let menuBackground = document.getElementById('menu__background')
     ctx = menuBackground.getContext('2d');
     screenWidth = window.innerWidth
     ctxWidth = 0
-    bgGradient = ctx.createLinearGradient(0, 0, ctxWidth - ctxWidth * 0.2, 0);
+    bgGradient = ctx.createLinearGradient(0, 0, ctxWidth - ctxWidth * 0.1, 0);
     bgGradient.addColorStop(0, "rgba(238, 85, 20, 1)");
     bgGradient.addColorStop(1, "rgba(238, 85, 20, 0)");
 
 function setupBg() {
     menuBackground.style.width = screenWidth - 20 + 'px';
     ctxWidth = menuBackground.width;
-    bgGradient = ctx.createLinearGradient(0, 0, ctxWidth - ctxWidth * 0.2, 0);
+    bgGradient = ctx.createLinearGradient(0, 0, ctxWidth, 0);
     bgGradient.addColorStop(0, "rgba(238, 85, 20, 1)");
     bgGradient.addColorStop(1, "rgba(238, 85, 20, 0)");
 }
