@@ -1,0 +1,151 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrap .header .header__group .logo .logo__text {
+  font-family: "Source Serif Pro", serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  color: #1A0A03;
+  text-transform: uppercase;
+  text-align: center;
+}
+.wrap .header .header__group .logo:before {
+  content: "";
+  display: flex;
+  width: calc(100% + 20px);
+  height: 25px;
+  background: #333333;
+  position: relative;
+  bottom: -10px;
+  background: url("./images/logo.svg") no-repeat 0 center;
+  background-size: contain;
+  left: -30px;
+}
+
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+}
+.wrap .header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 25px 50px;
+}
+.wrap .header .header__group {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.wrap .header .header__group .logo {
+  position: relative;
+  cursor: pointer;
+  top: -8px;
+}
+.wrap .header .header__group .header__navigation {
+  display: flex;
+  align-items: center;
+}
+.wrap .header .header__group .header__navigation .header__list {
+  display: flex;
+  gap: 25px;
+}
+.wrap .header .header__group .header__navigation .header__list .header__list-item .header__url {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #1A0A03;
+  opacity: 0.7;
+}
+.wrap .header .header__group .header__navigation .header__list .header__list-item_active .header__url {
+  color: #EE5514;
+}
+.wrap .header .header__btn-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap .header .header__btn-wrapper .header__btn {
+  cursor: pointer;
+  padding: 10px 30px;
+  gap: 10px;
+  min-width: 137px;
+  height: auto;
+  background: #EE5514;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #FFFFFF;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
