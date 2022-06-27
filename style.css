@@ -88,6 +88,11 @@ table {
   justify-content: space-around;
   align-items: center;
   padding: 25px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
 .wrap .header .header__group {
   height: 100%;
@@ -146,6 +151,18 @@ table {
   flex: none;
   order: 0;
   flex-grow: 0;
+}
+.wrap .menu {
+  width: 100%;
+  min-height: 100vh;
+}
+.wrap .menu .menu__background {
+  height: 100vh;
+  opacity: 0.1;
+  z-index: 0;
+}
+.wrap .menu * {
+  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

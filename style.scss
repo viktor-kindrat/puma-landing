@@ -46,6 +46,11 @@ $Source: 'Source Serif Pro', serif;
     justify-content: space-around;
     align-items: center;
     padding: 25px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
 
     .header__group {
       height: 100%;
@@ -117,5 +122,18 @@ $Source: 'Source Serif Pro', serif;
         flex-grow: 0;
       }
     }
+  }
+  .menu {
+    width: 100%;
+    min-height: 100vh;
+
+    .menu__background {
+      height: 100vh;
+      opacity: 0.1;
+      z-index: 0;
+    }
+  }
+  .menu * {
+    z-index: 1;
   }
 }
