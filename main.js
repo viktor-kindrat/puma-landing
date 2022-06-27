@@ -1,23 +1,22 @@
 let menuBackground = document.getElementById('menu__background')
     ctx = menuBackground.getContext('2d');
     screenWidth = window.innerWidth
-    ctxWidth = 0;
-    
-    // screen width tracker 
-window.onresize = function (){
-    screenWidth = window.innerWidth;
-    menuBackground.style.width = screenWidth - 20 + 'px'
+    ctxWidth = 0
+    bgGradient = ctx.createLinearGradient(0, 0, ctxWidth - ctxWidth * 0.2, 0);
+    bgGradient.addColorStop(0, "rgba(238, 85, 20, 1)");
+    bgGradient.addColorStop(1, "rgba(238, 85, 20, 0)");
+
+function setupBg() {
+    menuBackground.style.width = screenWidth - 20 + 'px';
+    ctxWidth = menuBackground.width;
+    bgGradient = ctx.createLinearGradient(0, 0, ctxWidth - ctxWidth * 0.2, 0);
+    bgGradient.addColorStop(0, "rgba(238, 85, 20, 1)");
+    bgGradient.addColorStop(1, "rgba(238, 85, 20, 0)");
 }
-
-menuBackground.style.width = screenWidth - 20 + 'px';
-ctxWidth = menuBackground.width;
-
-let bgGradient = ctx.createLinearGradient(0, 0, ctxWidth - ctxWidth * 0.2, 0);
-bgGradient.addColorStop(0, "rgba(238, 85, 20, 1)");
-bgGradient.addColorStop(1, "rgba(238, 85, 20, 0)");
 
 function drawBackground() {
     ctx.fillStyle = bgGradient;
+    ctx.clearRect(0, ctxWidth, ctxWidth, menuBackground.height)
     ctx.beginPath();
     ctx.moveTo(0, 0);
     ctx.lineTo(0, menuBackground.height);
@@ -25,7 +24,15 @@ function drawBackground() {
     ctx.lineTo(ctxWidth - ctxWidth * 0.2, 0);
     ctx.lineTo(0, 0);
     ctx.fill();
-    ctx.strokeStyle = '#000000';
+    ctx.beginPath()
 }
 
+// screen width tracker
+window.addEventListener('resize', function () {
+    screenWidth = window.innerWidth;
+    setupBg();
+    drawBackground();
+})
+
+setupBg();
 drawBackground()
