@@ -219,9 +219,10 @@ table {
   width: 100%;
   min-height: 100vh;
   padding: 0 100px;
+  margin-top: -50px;
 }
 .wrap .menu .menu__background {
-  height: 95vh;
+  height: 85vh;
   opacity: 0.1;
   z-index: 0;
   position: absolute;
