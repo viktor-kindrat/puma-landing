@@ -79,5 +79,17 @@ window.addEventListener('resize', function () {
     drawBackground();
 })
 
+window.addEventListener("scroll", (event) => {
+    let scroll = this.scrollY;
+    if (scroll >= 100) {
+        document.querySelector('.header').style.background = 'rgba(254, 254, 254, 0.3)';
+        document.querySelector('.header').style.transition = '0.3s';
+    } else {
+        document.querySelector('.header').style.background = 'transparent';
+        document.querySelector('.header').style.transition = '0.3s';
+    }
+    console.log(scroll)
+});
+
 setupBg();
 drawBackground()
