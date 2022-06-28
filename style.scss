@@ -273,6 +273,15 @@ $Source: 'Source Serif Pro', serif;
       top: -83px;
       z-index: 10;
 
+      .menu__hr {
+        display: block;
+        height: 70%;
+        width: 1.5px;
+        background: #EE5514;
+        border: none;
+        outline: none;
+      }
+
       .menu__column {
         height: 100%;
         display: flex;

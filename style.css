@@ -333,6 +333,14 @@ table {
   top: -83px;
   z-index: 10;
 }
+.wrap .menu .menu__card .menu__hr {
+  display: block;
+  height: 70%;
+  width: 1.5px;
+  background: #EE5514;
+  border: none;
+  outline: none;
+}
 .wrap .menu .menu__card .menu__column {
   height: 100%;
   display: flex;
