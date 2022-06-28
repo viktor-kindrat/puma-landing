@@ -1,6 +1,7 @@
 @import "reset";
+@import "select";
 
-$Poppis: 'Poppins', sans-serif;
+$Poppins: 'Poppins', sans-serif;
 $Source: 'Source Serif Pro', serif;
 
 * {
@@ -92,7 +93,7 @@ $Source: 'Source Serif Pro', serif;
           .header__list-item {
             .header__url {
               text-decoration: none;
-              font-family: $Poppis;
+              font-family: $Poppins;
               font-style: normal;
               font-weight: 400;
               font-size: 16px;
@@ -128,7 +129,7 @@ $Source: 'Source Serif Pro', serif;
         border-radius: 5px;
         border: none;
         outline: none;
-        font-family: $Poppis;
+        font-family: $Poppins;
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
@@ -146,7 +147,7 @@ $Source: 'Source Serif Pro', serif;
     padding: 0 100px;
 
     .menu__background {
-      height: 80vh;
+      height: 95vh;
       opacity: 0.1;
       z-index: 0;
       position: absolute;
@@ -185,7 +186,7 @@ $Source: 'Source Serif Pro', serif;
         }
 
         .menu__text {
-          font-family: $Poppis;
+          font-family: $Poppins;
           font-style: normal;
           font-weight: 400;
           font-size: 16px;
@@ -194,6 +195,7 @@ $Source: 'Source Serif Pro', serif;
           opacity: 0.7;
         }
       }
+
       .menu__image-group {
         height: calc(80vh - 50px);
         width: 50%;
@@ -240,6 +242,7 @@ $Source: 'Source Serif Pro', serif;
           margin-left: -275px;
           z-index: 2;
         }
+
         .menu__next-btn {
           width: 70px;
           height: 70px;
@@ -252,6 +255,53 @@ $Source: 'Source Serif Pro', serif;
           margin-right: -60px;
           z-index: 6;
         }
+      }
+    }
+
+    .menu__card {
+      height: 125px;
+      width: 65%;
+      max-width: 792px;
+      background: #FFFFFF;
+      box-shadow: 0 1px 14px rgba(26, 10, 3, 0.05);
+      border-radius: 5px;
+      padding: 30px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      position: relative;
+      top: -83px;
+      z-index: 10;
+
+      .menu__column {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .menu__title {
+          font-family: $Poppins;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 160%;
+          color: #1A0A03;
+          opacity: 0.7;
+        }
+      }
+
+      .menu__btn {
+        padding: 15px 30px;
+        background: #EE5514;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        font-family: $Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        color: #FFFFFF;
+        cursor: pointer;
       }
     }
   }

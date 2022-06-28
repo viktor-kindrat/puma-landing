@@ -48,6 +48,54 @@ table {
   border-spacing: 0;
 }
 
+/* The container must be positioned relative: */
+.custom-select {
+  width: 80px;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #1A0A03;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background: transparent url("./images/arrow-down.svg") no-repeat 100% center;
+  background-size: 12px 6px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div, .select-selected {
+  color: #000000;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #ffffff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -172,7 +220,7 @@ table {
   padding: 0 100px;
 }
 .wrap .menu .menu__background {
-  height: 80vh;
+  height: 95vh;
   opacity: 0.1;
   z-index: 0;
   position: absolute;
@@ -269,6 +317,49 @@ table {
   cursor: pointer;
   margin-right: -60px;
   z-index: 6;
+}
+.wrap .menu .menu__card {
+  height: 125px;
+  width: 65%;
+  max-width: 792px;
+  background: #FFFFFF;
+  box-shadow: 0 1px 14px rgba(26, 10, 3, 0.05);
+  border-radius: 5px;
+  padding: 30px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  top: -83px;
+  z-index: 10;
+}
+.wrap .menu .menu__card .menu__column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.wrap .menu .menu__card .menu__column .menu__title {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #1A0A03;
+  opacity: 0.7;
+}
+.wrap .menu .menu__card .menu__btn {
+  padding: 15px 30px;
+  background: #EE5514;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+  cursor: pointer;
 }
 .wrap .menu * {
   z-index: 1;

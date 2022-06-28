@@ -1,0 +1,47 @@
+/* The container must be positioned relative: */
+.custom-select {
+    width: 80px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: #1A0A03;
+}
+
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+    background: transparent url("./images/arrow-down.svg") no-repeat 100% center;
+    background-size: 12px 6px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+    color: #000000;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: #ffffff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}

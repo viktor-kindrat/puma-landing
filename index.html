@@ -22,7 +22,8 @@
             </div>
             <nav class="header__navigation">
                 <ul class="header__list">
-                    <li class="header__list-item header__list-item_active"><a href="#menu" class="header__url">Menu</a></li>
+                    <li class="header__list-item header__list-item_active"><a href="#menu" class="header__url">Menu</a>
+                    </li>
                     <li class="header__list-item"><a href="#" class="header__url">About</a></li>
                     <li class="header__list-item"><a href="#" class="header__url">Feature</a></li>
                     <li class="header__list-item"><a href="#" class="header__url">Gallery</a></li>
@@ -34,6 +35,7 @@
         </div>
     </header>
     <section class="menu" id="menu">
+        <canvas class="menu__background" id="menu__background"></canvas>
         <div class="menu__row">
             <div class="menu__text-group">
                 <h1 class="menu__headline">
@@ -46,14 +48,61 @@
             <div class="menu__image-group">
                 <div class="menu__image" id="menu__image"></div>
                 <div class="menu__canvas-wrap">
-                    <canvas width="400px" height="400px" class="menu__image-border" id="menu__image-border">Unavialable in your browser</canvas>
+                    <canvas width="400px" height="400px" class="menu__image-border" id="menu__image-border">Unavialable
+                        in your browser
+                    </canvas>
                 </div>
                 <button class="menu__next-btn" id="menu__next-btn"></button>
             </div>
         </div>
-        <canvas class="menu__background" id="menu__background"></canvas>
+        <div class="menu__card">
+            <div class="menu__column">
+                <p class="menu__title">Brand</p>
+                <div class="custom-select">
+                    <label for="menu__select_brand"></label><select class="menu__select" id="menu__select_brand">
+                    <option value="Puma" selected>Puma</option>
+                    <option value="Puma" selected>Puma</option>
+                    <option value="Nike">Nike</option>
+                    <option value="Other">Other</option>
+                </select>
+                </div>
+            </div>
+            <div class="menu__column">
+                <p class="menu__title">Person</p>
+                <div class="custom-select">
+                    <label for="menu__select_person"></label><select class="menu__select" id="menu__select_person">
+                    <option value="Men" selected>Men</option>
+                    <option value="Men" selected>Men</option>
+                    <option value="Woman">Woman</option>
+                </select>
+                </div>
+            </div>
+            <div class="menu__column">
+                <p class="menu__title">Size</p>
+                <div class="custom-select">
+                    <label for="menu__select_size"></label><select class="menu__select" id="menu__select_size">
+                    <option value="Large" selected>Large</option>
+                    <option value="Large" selected>Large</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Normal">Normal</option>
+                </select>
+                </div>
+
+                <p class="menu__title">Price</p>
+                <div class="custom-select">
+                    <label for="menu__select_price"></label><select class="menu__select" id="menu__select_price">
+                    <option value="150" selected>150$</option>
+                    <option value="150" selected>150$</option>
+                    <option value="165">165$</option>
+                    <option value="102">102$</option>
+                </select>
+                </div>
+            </div>
+            <button class="menu__btn">Buy now</button>
+        </div>
     </section>
 </div>
 <script src="main.js"></script>
+<script src="select.js"></script>
 </body>
 </html>
