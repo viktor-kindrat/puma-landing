@@ -79,7 +79,7 @@ window.addEventListener('resize', function () {
     drawBackground();
 })
 
-window.addEventListener("scroll", (event) => {
+window.addEventListener("scroll", () => {
     let scroll = this.scrollY;
     if (scroll >= 100) {
         document.querySelector('.header').style.background = 'rgba(254, 254, 254, 0.3)';
