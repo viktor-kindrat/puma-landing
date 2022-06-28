@@ -37,6 +37,7 @@ menuNext.addEventListener('click', function () {
 brdrctx.fillStyle = 'rgba(238, 85, 20, 0.4)';
 brdrctx.fillRect(0, 0, borderWidth, borderHeight);
 brdrctx.clearRect(12, 12, borderWidth - 24, borderHeight - 24);
+brdrctx.fillStyle = 'rgba(238, 85, 20, 0.1)';
 
 for (let i = 1; i !== 9; i++) {
     for (let j = 1; j !== 9; j++) {
