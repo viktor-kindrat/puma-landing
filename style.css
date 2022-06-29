@@ -409,6 +409,7 @@ table {
 .wrap .about .video .video__container .video__item {
   max-width: 500px;
   border-radius: 10px;
+  display: block;
   position: relative;
   left: 50px;
 }

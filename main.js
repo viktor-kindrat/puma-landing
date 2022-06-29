@@ -107,6 +107,7 @@ videoControl.addEventListener('mouseout', function () {
 })
 
 videoControl.addEventListener('click', function () {
+    this.style.opacity = '1';
     if (videoPlayState) {
         document.getElementById('video').play();
         this.style.background = '#ffffff url(./images/pause.svg) no-repeat center'
