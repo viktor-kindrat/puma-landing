@@ -10,7 +10,10 @@ borderWidth = border.width
 menuNext = document.getElementById('menu__next-btn')
 menuImage = document.getElementById('menu__image')
 imagesCount = 1
-imageIndex = 0;
+imageIndex = 0
+videoPlayState = true
+videoControl = document.querySelector('.video__control')
+video = document.getElementById('video');
 
 menuNext.addEventListener('click', function () {
     if (imageIndex < imagesCount) {
@@ -83,11 +86,46 @@ window.addEventListener("scroll", () => {
     let scroll = this.scrollY;
     if (scroll >= 100) {
         document.querySelector('.header').style.background = 'rgba(254, 254, 254, 0.3)';
+        document.querySelector('.header').style.backdropFilter = 'blur(10px)';
     } else {
         document.querySelector('.header').style.background = 'transparent';
+        document.querySelector('.header').style.backdropFilter = '';
     }
     console.log(scroll)
 });
+
+videoControl.addEventListener('mouseenter', function () {
+    if (!videoPlayState) {
+        this.style.opacity = '1'
+    }
+})
+
+videoControl.addEventListener('mouseout', function () {
+    if (!videoPlayState) {
+        this.style.opacity = '0'
+    }
+})
+
+videoControl.addEventListener('click', function () {
+    if (videoPlayState) {
+        document.getElementById('video').play();
+        this.style.background = '#ffffff url(./images/pause.svg) no-repeat center'
+        this.style.backgroundSize = '40px'
+        videoPlayState = false;
+    } else {
+        document.getElementById('video').pause();
+        this.style.background = '#ffffff url(./images/play.svg) no-repeat center'
+        this.style.backgroundSize = '30px'
+        videoPlayState = true;
+    }
+})
+
+video.addEventListener('ended', function () {
+    videoPlayState = true;
+    this.style.background = '#ffffff url(./images/play.svg) no-repeat center'
+    this.style.backgroundSize = '30px'
+    videoControl.style.opacity = '1';
+})
 
 setupBg();
 drawBackground()

@@ -65,7 +65,7 @@ $Source: 'Source Serif Pro', serif;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 100;
     transition: background-color 0.3s;
 
     .header__group {
@@ -321,5 +321,85 @@ $Source: 'Source Serif Pro', serif;
 
   .menu * {
     z-index: 1;
+  }
+
+  .about {
+    width: 100%;
+    min-height: 100vh;
+
+    .video {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 100px;
+
+      .video__description {
+        width: calc(50% - 25px);
+        margin-right: 25px;
+
+        .video__text {
+          max-width: 70%;
+          font-family: $Poppins;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 160%;
+          color: #1A0A03;
+          opacity: 0.7;
+        }
+      }
+
+      .video__container {
+        width: calc(50% - 50px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .video__item {
+          max-width: 500px;
+          border-radius: 10px;
+          position: relative;
+          left: 50px;
+        }
+
+        .video__control {
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          background: #FFFFFF url("./images/play.svg") no-repeat center;
+          background-size: 30px;
+          position: relative;
+          left: -250px;
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: opacity 0.3s;
+        }
+      }
+    }
+
+    .about__headline_2 {
+      font-family: $Source;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 150%;
+      letter-spacing: 0.05em;
+      color: #EE5514;
+      text-transform: uppercase;
+    }
+    .about__headline_3 {
+      font-family: $Source;
+      max-width: 91%;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 44px;
+      line-height: 130%;
+      color: #1A0A03;
+    }
   }
 }
