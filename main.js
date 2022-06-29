@@ -111,6 +111,9 @@ videoControl.addEventListener('click', function () {
         document.getElementById('video').play();
         this.style.background = '#ffffff url(./images/pause.svg) no-repeat center'
         this.style.backgroundSize = '40px'
+        setTimeout(function () {
+            videoControl.style.opacity = '0'
+        }, 200)
         videoPlayState = false;
     } else {
         document.getElementById('video').pause();
