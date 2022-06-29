@@ -22,6 +22,21 @@ $Source: 'Source Serif Pro', serif;
   }
 }
 
+%btn-orange {
+  padding: 15px 30px;
+  background: #EE5514;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: $Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
 %circle-styles {
   height: 140px;
   width: 140px;
@@ -310,18 +325,7 @@ $Source: 'Source Serif Pro', serif;
       }
 
       .menu__btn {
-        padding: 15px 30px;
-        background: #EE5514;
-        border-radius: 5px;
-        border: none;
-        outline: none;
-        font-family: $Poppins;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        color: #FFFFFF;
-        cursor: pointer;
-        margin-left: 10px;
+        @extend %btn-orange;
       }
     }
   }
