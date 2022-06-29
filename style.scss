@@ -22,6 +22,13 @@ $Source: 'Source Serif Pro', serif;
   }
 }
 
+%circle-styles {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  margin-bottom: 35px;
+}
+
 %logo-styles {
   .logo__text {
     font-family: $Source;
@@ -383,6 +390,111 @@ $Source: 'Source Serif Pro', serif;
       }
     }
 
+    .feature {
+      width: 100%;
+      min-height: calc(100vh - 100px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 100px;
+
+      .about__headline_3, .about__headline_2 {
+        width: 100%;
+        text-align: center;
+      }
+
+      .about__headline_3 {
+        margin-bottom: 25px;
+      }
+
+      .feature__cards {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+
+        .feature__card {
+          max-width: 360px;
+          background: #FFFFFF;
+          box-shadow: 0px 1px 30px rgba(26, 10, 3, 0.05);
+          border-radius: 10px;
+          padding: 50px;
+          margin-right: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          .about__headline_4 {
+            margin-bottom: 10px;
+          }
+
+          .about__text {
+            margin-bottom: 20px;
+          }
+
+          .feature__url {
+            text-decoration: none;
+            font-family: $Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 160%;
+            text-align: center;
+            color: #EE5514;
+            display: flex;
+            align-items: center;
+            position: relative;
+            left: 5px;
+
+            .feature__arrow {
+              height: 8px;
+              width: 4px;
+              display: block;
+              background: url("./images/arrow-right.svg") no-repeat center;
+              background-size: contain;
+              margin-left: 10px;
+            }
+          }
+
+          .feature__icon {
+            @extend %circle-styles;
+          }
+
+          &.feature__card_quality {
+            .feature__icon {
+              background: rgba(18, 101, 225, 0.1) url("./images/feature-icon01.svg") no-repeat center;
+              background-size: 70px;
+            }
+          }
+
+          &.feature__card_flexible {
+            .feature__icon {
+              background: rgba(95, 46, 234, 0.1) url("./images/feature-icon03.svg") no-repeat center;
+              background-size: 70px;
+            }
+          }
+
+          &.feature__card_long {
+            .feature__icon {
+              background: rgba(170, 33, 234, 0.1) url("./images/feature-icon02.svg") no-repeat center;
+              background-size: 70px;
+            }
+          }
+
+          &.feature__card_active {
+            background: rgba(238, 85, 20, 0.1);
+          }
+        }
+      }
+    }
+
     .about__headline_2 {
       font-family: $Source;
       font-style: normal;
@@ -401,6 +513,27 @@ $Source: 'Source Serif Pro', serif;
       font-size: 44px;
       line-height: 130%;
       color: #1A0A03;
+    }
+
+    .about__headline_4 {
+      font-family: $Source;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 150%;
+      text-align: center;
+      color: #1A0A03;
+    }
+
+    .about__text {
+      font-family: $Poppins;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160%;
+      text-align: center;
+      color: #1A0A03;
+      opacity: 0.7;
     }
   }
 }
