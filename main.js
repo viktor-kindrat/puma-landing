@@ -122,8 +122,8 @@ videoControl.addEventListener('click', function () {
 
 video.addEventListener('ended', function () {
     videoPlayState = true;
-    this.style.background = '#ffffff url(./images/play.svg) no-repeat center'
-    this.style.backgroundSize = '30px'
+    videoControl.style.background = '#ffffff url(./images/play.svg) no-repeat center'
+    videoControl.style.backgroundSize = '30px'
     videoControl.style.opacity = '1';
 })
 
