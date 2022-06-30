@@ -13,7 +13,95 @@ imagesCount = 1
 imageIndex = 0
 videoPlayState = true
 videoControl = document.querySelector('.video__control')
-video = document.getElementById('video');
+video = document.getElementById('video')
+testImage = document.querySelector('#testimonials__avatar')
+testLeft = document.querySelector('#testimonials__left')
+testRight = document.querySelector('#testimonials__right')
+testName = document.querySelector('#testimonials__user-name')
+testText = document.querySelector('#testimonials__text')
+testHeadline = document.querySelector('#testimonials__headline')
+testContent = document.querySelector('#testimonials__content')
+testUsers = [{
+    name: 'Abram',
+    surName: 'Korsgaard',
+    image: './images/testimonials-avatar.png',
+    headline: 'Their services was best and friendly',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus tempor id faucibus quam lobortis.'
+}]
+testCurrentUser = 0;
+
+function testSetUser(i) {
+    testImage.style.backgroundImage = 'url("' + testUsers[i].image + '")';
+    testName.innerHTML = testUsers[i].name + ' ' + testUsers[i].surName;
+    testText.innerHTML = testUsers[i].text;
+    testHeadline.innerHTML = testUsers[i].headline;
+}
+
+testLeft.addEventListener('click', function () {
+    testContent.style.opacity = '0';
+    setTimeout(function () {
+        if (testCurrentUser === 0) {
+            testCurrentUser = testUsers.length - 1;
+            testSetUser(testCurrentUser)
+            setTimeout(function () {
+                testContent.style.opacity = '1';
+            }, 300)
+        } else {
+            testCurrentUser--;
+            testSetUser(testCurrentUser)
+            testContent.style.opacity = '1';
+        }
+    }, 300)
+})
+
+testRight.addEventListener('click', function () {
+    testContent.style.opacity = '0';
+    testCurrentUser++;
+    if (testCurrentUser === testUsers.length) {
+        fetch('https://randomuser.me/api/')
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                testImage.style.backgroundImage = 'url("' + data.results[0].picture.large + '")'
+                testName.innerHTML = data.results[0].name.first + ' ' + data.results[0].name.last
+                return data.results[0]
+            })
+            .then((user) => {
+                let userItem = {
+                    name: user.name.first,
+                    surName: user.name.last,
+                    image: user.picture.large
+                }
+                fetch('https://baconipsum.com/api/?type=meat-and-filter&sentences=2')
+                    .then(res => {
+                        return res.json()
+                    })
+                    .then(data => {
+                        testText.innerHTML = data[0];
+                        userItem.text = data[0];
+                    })
+                    .then(()=>{
+                        fetch('https://baconipsum.com/api/?type=meat-and-filter&sentences=0.2')
+                            .then (res => {
+                                return res.json()
+                            })
+                            .then (data => {
+                                testHeadline.innerHTML = data[0];
+                                userItem.headline = data[0];
+                                testUsers.push(userItem)
+                                console.log(testUsers);
+                                testContent.style.opacity = '1'
+                            })
+                    })
+            })
+    } else {
+        setTimeout(function () {
+            testSetUser(testCurrentUser);
+            testContent.style.opacity = '1';
+        }, 300)
+    }
+})
 
 menuNext.addEventListener('click', function () {
     if (imageIndex < imagesCount) {
@@ -91,7 +179,6 @@ window.addEventListener("scroll", () => {
         document.querySelector('.header').style.background = 'transparent';
         document.querySelector('.header').style.backdropFilter = '';
     }
-    console.log(scroll)
 });
 
 videoControl.addEventListener('mouseenter', function () {
