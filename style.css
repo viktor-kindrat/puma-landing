@@ -133,7 +133,7 @@ table {
   margin-bottom: 35px;
 }
 
-.wrap .header .header__group .logo .logo__text {
+.wrap .footer .footer__upper .footer__column .logo .logo__text, .wrap .header .header__group .logo .logo__text {
   font-family: "Source Serif Pro", serif;
   font-style: normal;
   font-weight: 600;
@@ -142,7 +142,7 @@ table {
   text-transform: uppercase;
   text-align: center;
 }
-.wrap .header .header__group .logo:before {
+.wrap .footer .footer__upper .footer__column .logo:before, .wrap .header .header__group .logo:before {
   content: "";
   display: flex;
   width: calc(100% + 20px);
@@ -555,6 +555,152 @@ table {
   text-align: center;
   color: #1A0A03;
   opacity: 0.7;
+}
+.wrap .footer {
+  width: 100%;
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(238, 85, 20, 0.04);
+}
+.wrap .footer .footer__upper {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.wrap .footer .footer__upper .footer__column {
+  width: 25%;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.wrap .footer .footer__upper .footer__column:last-child {
+  margin-right: 0;
+}
+.wrap .footer .footer__upper .footer__column .logo {
+  margin-bottom: 30px;
+  position: relative;
+  top: -10px;
+  right: -25px;
+}
+.wrap .footer .footer__upper .footer__column .footer__url {
+  height: 20px;
+  width: 20px;
+  display: block;
+  background: gray;
+  margin-right: 25px;
+}
+.wrap .footer .footer__upper .footer__column .footer__url_facebook {
+  background: url("./images/social-medias-icon2.svg");
+  background-size: contain;
+}
+.wrap .footer .footer__upper .footer__column .footer__url_instagram {
+  background: url("./images/social-medias-icon3.svg");
+  background-size: contain;
+}
+.wrap .footer .footer__upper .footer__column .footer__url_twitter {
+  background: url("./images/social-medias-icon1.svg");
+  background-size: contain;
+}
+.wrap .footer .footer__upper .footer__column .footer__url_google {
+  background: url("./images/social-medias-icon4.svg");
+  background-size: contain;
+}
+.wrap .footer .footer__upper .footer__column .footer__row {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+.wrap .footer .footer__upper .footer__column .footer__text {
+  height: auto;
+  width: auto;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: #1A0A03;
+  opacity: 0.7;
+  margin-bottom: 20px;
+  text-decoration: none;
+  background: transparent;
+  margin-right: 0;
+}
+.wrap .footer .footer__upper .footer__column .footer__headline {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: #1A0A03;
+  margin-bottom: 35px;
+}
+.wrap .footer .footer__upper .footer__column .footer__input-group {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.wrap .footer .footer__upper .footer__column .footer__input-group .footer__input {
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 15px 30px 15px 20px;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #1A0A03;
+  opacity: 1;
+}
+.wrap .footer .footer__upper .footer__column .footer__input-group .footer__input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #1A0A03;
+  opacity: 0.6;
+}
+.wrap .footer .footer__upper .footer__column .footer__input-group .footer__btn {
+  height: 50px;
+  background: #EE5514;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  outline: none;
+  padding: 16px 31px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 160%;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.wrap .footer .footer__hr {
+  width: 100%;
+  color: rgb(166, 164, 164);
+  margin-bottom: 50px;
+}
+.wrap .footer .footer__bottom {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  text-align: center;
+  color: #1A0A03;
+  opacity: 0.7;
+  margin: -20px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
