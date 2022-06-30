@@ -685,6 +685,7 @@ table {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin-left: -5px;
 }
 .wrap .footer .footer__hr {
   width: 100%;
