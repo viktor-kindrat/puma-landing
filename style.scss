@@ -357,6 +357,8 @@ $Source: 'Source Serif Pro', serif;
   .about {
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 
     .video {
       width: 100%;
@@ -515,6 +517,93 @@ $Source: 'Source Serif Pro', serif;
           &.feature__card_active {
             background: rgba(238, 85, 20, 0.1);
           }
+        }
+      }
+    }
+
+    .gallery {
+      width: 100%;
+      max-width: 1140px;
+      min-height: 100vh;
+      padding: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: center;
+
+      .about__headline_3 {
+        margin: 15px 0;
+      }
+
+      .gallery__row {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+
+        .gallery__title {
+          font-family: $Poppins;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 140%;
+          letter-spacing: 0.05em;
+          color: #1A0A03;
+          opacity: 0.7;
+          margin-right: 50px;
+        }
+
+        .gallery__ctg-btn {
+          border: none;
+          outline: none;
+          background: transparent;
+          font-family: $Poppins;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 140%;
+          letter-spacing: 0.05em;
+          color: #1A0A03;
+          opacity: 0.7;
+          margin-right: 20px;
+          cursor: pointer;
+
+          &_active {
+            text-decoration: underline;
+            opacity: 1;
+            color: #EE5514;
+          }
+        }
+
+        .gallery__btn-place {
+          display: flex;
+
+          .gallery__btn {
+            height: 50px;
+            width: 50px;
+            background: rgba(238, 85, 20, 0.1);
+            border-radius: 50%;
+            cursor: pointer;
+
+            &.gallery__btn_left {
+              background: rgba(238, 85, 20, 0.1) url("./images/arrow-left.svg") no-repeat center;
+              background-size: 8px 16px;
+              margin-right: 25px;
+            }
+
+            &.gallery__btn_right {
+              background: rgba(238, 85, 20, 0.1) url("./images/arrow-right.svg") no-repeat center;
+              background-size: 8px 16px;
+            }
+          }
+
+        }
+
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }
