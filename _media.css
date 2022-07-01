@@ -275,4 +275,127 @@
     .wrap .header .header__group {
         justify-content: flex-start;
     }
+
+    .wrap .menu .menu__background {
+        height: 100%;
+    }
+
+    .wrap .menu {
+        padding: 0 50px;
+    }
+
+    .wrap .about .gallery .gallery__row .gallery__title {
+        margin-right: 25px;
+    }
+}
+
+@media screen and (max-width: 669px) {
+    .wrap .about .gallery .gallery__row .gallery__title {
+        display: none;
+    }
+
+    .wrap .card:nth-child(2) {
+        display: none;
+    }
+
+    .wrap .footer .footer__upper {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .wrap .footer .footer__upper .footer__column {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .wrap .about .about__headline_3 {
+        font-size: 36px;
+    }
+
+    .wrap .menu .menu__card {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .wrap .menu .menu__card .menu__column {
+        width: 100%;
+    }
+    .wrap .menu .menu__card .menu__hr {
+        width: 100%;
+        height: 2px;
+        margin: 10px 0;
+    }
+    .wrap .menu .menu__row .menu__image-group .menu__image {
+        height: 200px;
+        width: 200px;
+        margin-right: -100px;
+        display: flex;
+        background-position: center;
+    }
+
+    .wrap .menu .menu__row .menu__image-group .menu__image-border {
+        width: 200px;
+        height: 200px;
+        min-width: 200px;
+        min-height: 200px;
+        max-width: 200px;
+        max-height: 200px;
+        margin-left: -100px;
+    }
+
+    .wrap .menu .menu__row .menu__image-group .menu__next-btn {
+        left: 5px;
+    }
+
+    .wrap .menu, .wrap .about .video, .wrap .about .feature, .wrap .about .gallery, .wrap .about .testimonials {
+        padding: 0 25px;
+    }
+
+    .wrap .newsletter {
+        margin: 0 25px;
+    }
+
+    .wrap .footer {
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .wrap .header .header__btn-wrapper .header__btn {
+        display: none;
+    }
+
+    .wrap .menu .menu__row .menu__text-group .menu__headline {
+        font-size: 32px;
+    }
+
+    .wrap .menu .menu__row .menu__text-group .menu__text {
+        font-size: 14px;
+    }
+
+    .wrap .menu .menu__row .menu__image-group .menu__next-btn {
+        height: 30px;
+        width: 30px;
+    }
+
+    .wrap .menu .menu__card {
+        padding: 25px;
+    }
+
+    .wrap .about .about__headline_3, .wrap .about .gallery .about__headline_3, .wrap .newsletter .newsletter__section .newsletter__headline {
+        font-size: 28px;
+    }
+
+    .wrap .newsletter .newsletter__section .newsletter__text {
+        font-size: 14px;
+    }
+
+    .wrap .newsletter .newsletter__image {
+        height: 150px;
+    }
+
+    .wrap .card .card__btn, .wrap .menu .menu__card .menu__btn {
+        margin-left: 0;
+        margin-top: 25px;
+    }
 }
