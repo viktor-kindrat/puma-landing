@@ -1101,5 +1101,11 @@ $Source: 'Source Serif Pro', serif;
     &:last-child {
       margin-right: 0;
     }
+
+    &_active {
+      .card__image {
+        border: 2px solid #EE5514;
+      }
+    }
   }
 }
