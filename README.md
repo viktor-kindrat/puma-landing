@@ -16,6 +16,8 @@ Figma to HTML project made with Scss. A landing page of the shoes shop for Puma 
 - One scroll page
 - Custom video player
 - Preloader (in development)
+- Random user API
+- Bacon Ipsum API
 ---
 
 #### You can look preview here:
