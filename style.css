@@ -1276,6 +1276,12 @@ table {
     width: calc(50% - 15px);
     margin-right: 0;
   }
+  .wrap .header .header__group .header__navigation {
+    display: none;
+  }
+  .wrap .header .header__group {
+    justify-content: flex-start;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
