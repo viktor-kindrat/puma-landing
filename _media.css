@@ -348,7 +348,7 @@
     }
 
     .wrap .menu, .wrap .about .video, .wrap .about .feature, .wrap .about .gallery, .wrap .about .testimonials {
-        padding: 0 25px;
+        padding: 25px;
     }
 
     .wrap .newsletter {
